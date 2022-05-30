@@ -1,0 +1,76 @@
+.normalInput, .editableInput  {
+  --pale-blue: rgba(73, 133, 224, 0.25);
+  background: none;
+  border: none;
+  border-bottom: 0.125rem solid var(--pale-blue);
+  color: #3a86ff;
+  font-weight: bold;
+  margin-right: 20px;
+  padding: 5px 10px;
+  height: 2rem;
+  font-size: 1.2rem;
+  box-sizing: border-box;
+  transition: all .25ms ease;
+}
+
+.errorInput {
+  composes: normalInput;
+  border-bottom: 0.125rem solid red;
+  margin-right: 20px;
+  box-sizing: border-box;
+}
+
+.editableInput {
+  border-radius: 15px;
+}
+
+.normalInput::placeholder {
+  color: var(--pale-blue);
+}
+
+.normalInput:hover, .normalInput:focus, .normalInput:active,
+.editableInput:hover, .editableInput:active, .editableInput:focus {
+  background-color: var(--pale-blue);
+  border-bottom: 0.125rem solid rgba(73, 133, 224, 0.5);
+}
+
+.normalInput:focus, .errorMessage:focus,
+.editableInput:focus {
+  outline: none;
+}
+
+.inputContainer {
+  position: relative;
+}
+
+.errorMessage {
+  color: red;
+  position: absolute;
+  font-size: 0.9rem;
+  bottom: -17px;
+  right: 20px;
+  line-height: 1;
+}
+
+@media screen and (max-width: 600px) {
+  .normalInput, .editableInput {
+    max-width: 220px;
+    margin: 0;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .normalInput, .editableInput {
+    max-width: 170px;
+    margin: 0;
+  }
+  .errorMessage {
+    bottom: -25px;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .normalInput, .editableInput {
+    max-width: 150px;
+  }
+}

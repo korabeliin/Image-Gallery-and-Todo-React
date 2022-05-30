@@ -1,0 +1,28 @@
+.todosListItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 5px;
+  padding: 10px;
+  border-radius: 15px;
+  background-color: rgba(73, 133, 224, 0.25);
+  color: #3a86ff;
+  font-size: 1.3rem;
+}
+
+.todosListItem_DeleteButton {
+  border-radius: 50px;
+  padding: 10px 15px;
+  background-color: #e63946;
+  color: beige;
+  border: none;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+@media screen and (max-width: 450px) {
+  .todosListItem {
+    padding: 7px;
+    font-size: 1.2rem;
+  }
+}
